@@ -18,7 +18,7 @@ Preparing ADE20K according to the [guidelines](https://github.com/open-mmlab/mms
 
 | Method       | Backbone   | Pretrain    | Iters | mIoU(code) | mIoU(paper) | Config                                                | Download                                                                                          |
 |--------------|------------|-------------|:-----:|:----------:|:-----------:|-------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| Semantic FPN | DGFormer   | ImageNet-1K |  80K  |    39.16   |     39.2    | [config](configs/sem_fpn/DGFormer/fpn_dgformer_ade20k_80k.py) | [log](work_dirs/fpn_dgformer_ade20k_80k/20230715_231918.log.json) & [model](https://drive.google.com/file/d/13SaiOJ9hH7Wwg_AyeQ158LNV9vtjq6Lu/view?usp=sharing) |
+| Semantic FPN | DGFormer   | ImageNet-1K |  80K  |    39.16   |     39.2    | [config](configs/sem_fpn/DGFormer/fpn_dgformer_ade20k_80k.py) | [log](work_dirs/fpn_dgformer_ade20k_80k/20230715_231918.log.json) & [model](https://github.com/ISCLab-Bistu/DGFormer/releases/tag/seg-model/latest.pth) |
 
 
 ## Evaluation
