@@ -46,27 +46,27 @@ The directory structure is the standard layout for the torchvision [`datasets.Im
 
 | Method           | Size | Acc@1 | #Params (M) | Config                                   | Download                                                                                   |
 |------------------|:----:|:-----:|:-----------:|------------------------------------------|--------------------------------------------------------------------------------------------|
-| PVT-V2-B0        |  224 |  72.8 |     3.4     | [config](configs/dgformer/dgformer_dga_effn.py)    | 14M [[Google]](https://drive.google.com/file/d/1qnqChpm93vtXULeTuCT_0mJ2ZKIDc-Qo/view?usp=sharing) [[GitHub]](https://github.com/whai362/PVT/releases/download/v2/pvt_v2_b0.pth) |
+| PVT-V2-B0        |  224 |  72.8 |     3.4     | [config](configs/dgformer/dgformer_dga_effn.py)    | 12.9M  [[GitHub]](https://github.com/whai362/PVT/releases/download/v2/pvt_v2_b0.pth) |
 
 
 
 
 ## Evaluation
-To evaluate a pre-trained PVT-Small on ImageNet val with a single GPU run:
+To evaluate a pre-trained DGFormer on ImageNet val with a single GPU run:
 ```
-sh dist_train.sh configs/pvt/pvt_small.py 1 --data-path /path/to/imagenet --resume /path/to/checkpoint_file --eval
+sh dist_train.sh configs/dgformer/dgformer_dga_effn.py 1 --data-path /path/to/imagenet --resume /path/to/checkpoint_file --eval
 ```
 This should give
 ```
-* Acc@1 79.764 Acc@5 94.950 loss 0.885
-Accuracy of the network on the 50000 test images: 79.8%
+* Acc@1 72.828 Acc@5 94.950 loss 0.885
+Accuracy of the network on the 50000 test images: 72.8%
 ```
 
 ## Training
-To train PVT-Small on ImageNet on a single node with 8 gpus for 300 epochs run:
+To train DGFormer on ImageNet on a single node with 8 gpus for 300 epochs run:
 
 ```
-sh dist_train.sh configs/pvt/pvt_small.py 8 --data-path /path/to/imagenet
+sh dist_train.sh configs/dgformer/dgformer_dga_effn.py 8 --data-path /path/to/imagenet
 ```
 
 ## Calculating FLOPS & Params
@@ -77,8 +77,8 @@ python get_flops.py pvt_v2_b2
 This should give
 ```
 Input shape: (3, 224, 224)
-Flops: 4.04 GFLOPs
-Params: 25.36 M
+Flops: 0.4 GFLOPs
+Params: 3.4 M
 ```
 
 ## License
