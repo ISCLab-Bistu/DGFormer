@@ -93,9 +93,9 @@ python get_flops.py configs/dgformer/retinanet_dgformer_dga_effn_fpn_1x_coco.py
 ```
 This should give
 ```
-Input shape: (3, 1280, 800)
-Flops: 167.2 GFLOPs
-Params: 12.6 M
+Input shape: (3, 800, 1333)
+Flops: 167.28 GFLOPs
+Params: 12.64 M
 ```
 
 # License
