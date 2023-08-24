@@ -44,8 +44,8 @@ Prepare COCO according to the guidelines in [MMDetection v2.13.0](https://github
 
 | Method       | Backbone   | Pretrain    | Lr schd |  box AP  | box AP-0.5  | Config                                              | Download                                                                                          |
 |--------------|------------|-------------|:-----:|:----------:|:-----------:|-------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-|  RetinaNet   | DGFormer   | ImageNet-1K |   1x   |    37.6    |     58.0    | [config](configs/dgformer/retinanet_dgformer_dga_effn_fpn_1x_coco.py) | [log](https://drive.google.com/file/d/18NodMVuLWSHGjbUz6oMbtDnV2EddQEkC/view?usp=sharing) & [model](https://drive.google.com/file/d/13SaiOJ9hH7Wwg_AyeQ158LNV9vtjq6Lu/view?usp=sharing) |
-| Mask R-CNN   | DGFormer   | ImageNet-1K |  1x  |    38.6    |     60.5    | [config](configs/dgformer/mask_rcnn_dgformer_fpn_1x_coco.py) | [log](https://drive.google.com/file/d/12FnAEQHWFa5K0wurEn1LcI6BZD7vexJV/view?usp=sharing) & [model](https://drive.google.com/file/d/13fy-FXAfYnHgHRaUiJWVBON670wFLIiD/view?usp=sharing) |
+|  RetinaNet   | DGFormer   | ImageNet-1K |   1x   |    37.6    |     58.0    | [config](configs/dgformer/retinanet_dgformer_dga_effn_fpn_1x_coco.py) | [log](work_dirs/retinanet_dgformer_dga_effn_fpn_1x_coco/20230721_082820.log.json) & [model](https://drive.google.com/file/d/13SaiOJ9hH7Wwg_AyeQ158LNV9vtjq6Lu/view?usp=sharing) |
+| Mask R-CNN   | DGFormer   | ImageNet-1K |  1x  |    38.6    |     60.5    | [config](configs/dgformer/mask_rcnn_dgformer_fpn_1x_coco.py) | [log](work_dirs/mask_rcnn_dgformer_fpn_1x_coco/20230722_002453.log.json) & [model](https://drive.google.com/file/d/13fy-FXAfYnHgHRaUiJWVBON670wFLIiD/view?usp=sharing) |
 
 
 
