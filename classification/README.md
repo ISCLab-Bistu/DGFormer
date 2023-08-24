@@ -58,7 +58,7 @@ sh dist_train.sh configs/dgformer/dgformer_dga_effn.py 1 --data-path /path/to/im
 ```
 This should give
 ```
-* Acc@1 72.828 Acc@5 94.950 loss 0.885
+* Acc@1 72.823 Acc@5 91.496 loss 1.288
 Accuracy of the network on the 50000 test images: 72.8%
 ```
 
