@@ -2,10 +2,6 @@
 
 Our classification code is developed on top of [pytorch-image-models](https://github.com/rwightman/pytorch-image-models) and [deit](https://github.com/facebookresearch/deit).
 
-For details see [Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions](https://arxiv.org/pdf/2102.12122.pdf). 
-
-
-
 
 
 
