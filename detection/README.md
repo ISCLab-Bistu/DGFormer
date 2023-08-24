@@ -44,7 +44,7 @@ Prepare COCO according to the guidelines in [MMDetection v2.13.0](https://github
 
 | Method       | Backbone   | Pretrain    | Lr schd |  box AP  | box AP-0.5  | Config                                              | Download                                                                                          |
 |--------------|------------|-------------|:-----:|:----------:|:-----------:|-------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-|  RetinaNet   | DGFormer   | ImageNet-1K |   1x   |    37.6    |     58.0    | [config](configs/dgformer/retinanet_dgformer_dga_effn_fpn_1x_coco.py) | [log](work_dirs/retinanet_dgformer_dga_effn_fpn_1x_coco/20230721_082820.log.json) & [model](https://drive.google.com/file/d/13SaiOJ9hH7Wwg_AyeQ158LNV9vtjq6Lu/view?usp=sharing) |
+|  RetinaNet   | DGFormer   | ImageNet-1K |   1x   |    37.6    |     58.0    | [config](configs/dgformer/retinanet_dgformer_dga_effn_fpn_1x_coco.py) | [log](work_dirs/retinanet_dgformer_dga_effn_fpn_1x_coco/20230721_082820.log.json) & [model](https://github.com/ISCLab-Bistu/DGFormer/releases/tag/seg-model/iter_80000.pth) |
 | Mask R-CNN   | DGFormer   | ImageNet-1K |  1x  |    38.6    |     60.5    | [config](configs/dgformer/mask_rcnn_dgformer_fpn_1x_coco.py) | [log](work_dirs/mask_rcnn_dgformer_fpn_1x_coco/20230722_002453.log.json) & [model](https://github.com/ISCLab-Bistu/DGFormer/tree/main/detection/work_dirs/mask_rcnn_dgformer_fpn_1x_coco/latest.pth) |
 
 
