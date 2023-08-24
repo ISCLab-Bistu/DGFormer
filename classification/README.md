@@ -72,7 +72,7 @@ sh dist_train.sh configs/dgformer/dgformer_dga_effn.py 8 --data-path /path/to/im
 ## Calculating FLOPS & Params
 
 ```
-python get_flops.py pvt_v2_b2
+python get_flops.py dgformer
 ```
 This should give
 ```
