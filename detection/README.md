@@ -44,7 +44,7 @@ Prepare COCO according to the guidelines in [MMDetection v2.13.0](https://github
 
 | Method       | Backbone   | Pretrain    | Lr schd |  box AP  | box AP-0.5  | Config                                              | Download                                                                                          |
 |--------------|------------|-------------|:-----:|:----------:|:-----------:|-------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| RetinaNet    | DGFormer   | ImageNet-1K |   1x   |    37.6    |     58.0    | [config](configs/dgformer/retinanet_dgformer_dga_effn_fpn_1x_coco.py) | [log](https://drive.google.com/file/d/18NodMVuLWSHGjbUz6oMbtDnV2EddQEkC/view?usp=sharing) & [model](https://drive.google.com/file/d/13SaiOJ9hH7Wwg_AyeQ158LNV9vtjq6Lu/view?usp=sharing) |
+|  RetinaNet   | DGFormer   | ImageNet-1K |   1x   |    37.6    |     58.0    | [config](configs/dgformer/retinanet_dgformer_dga_effn_fpn_1x_coco.py) | [log](https://drive.google.com/file/d/18NodMVuLWSHGjbUz6oMbtDnV2EddQEkC/view?usp=sharing) & [model](https://drive.google.com/file/d/13SaiOJ9hH7Wwg_AyeQ158LNV9vtjq6Lu/view?usp=sharing) |
 | Mask R-CNN   | DGFormer   | ImageNet-1K |  1x  |    38.6    |     60.5    | [config](configs/dgformer/mask_rcnn_dgformer_fpn_1x_coco.py) | [log](https://drive.google.com/file/d/12FnAEQHWFa5K0wurEn1LcI6BZD7vexJV/view?usp=sharing) & [model](https://drive.google.com/file/d/13fy-FXAfYnHgHRaUiJWVBON670wFLIiD/view?usp=sharing) |
 
 
@@ -52,31 +52,32 @@ Prepare COCO according to the guidelines in [MMDetection v2.13.0](https://github
 
 
 ## Evaluation
-To evaluate PVT-Small + RetinaNet (640x) on COCO val2017 on a single node with 8 gpus run:
+To evaluate DGFormer + RetinaNet on COCO val2017 on a single node with 8 gpus run:
 ```
-dist_test.sh configs/retinanet_pvt_s_fpn_1x_coco_640.py /path/to/checkpoint_file 8 --out results.pkl --eval bbox
+dist_test.sh configs/dgformer/retinanet_dgformer_dga_effn_fpn_1x_coco.py /path/to/checkpoint_file 8 --out results.pkl --eval bbox
 ```
 This should give
 ```
-Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.387
-Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.593
-Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.408
-Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.212
-Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.416
-Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.544
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.545
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.545
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.545
-Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.329
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.583
-Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.721
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.376
+Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.580
+Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.401
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.226
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.407
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.497
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.549
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.549
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.549
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.361
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.585
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.707
 ```
+
 
 ## Training
-To train PVT-Small + RetinaNet (640x) on COCO train2017 on a single node with 8 gpus for 12 epochs run:
+To train DGFormer + RetinaNet on COCO train2017 on a single node with 8 gpus for 12 epochs run:
 
 ```
-dist_train.sh configs/retinanet_pvt_s_fpn_1x_coco_640.py 8
+dist_train.sh configs/dgformer/retinanet_dgformer_dga_effn_fpn_1x_coco.py 8
 ```
 
 ## Demo
@@ -88,13 +89,13 @@ python demo.py demo.jpg /path/to/config_file /path/to/checkpoint_file
 ## Calculating FLOPS & Params
 
 ```
-python get_flops.py configs/gfl_pvt_v2_b2_fpn_3x_mstrain_fp16.py
+python get_flops.py configs/dgformer/retinanet_dgformer_dga_effn_fpn_1x_coco.py
 ```
 This should give
 ```
 Input shape: (3, 1280, 800)
-Flops: 260.65 GFLOPs
-Params: 33.11 M
+Flops: 167.2 GFLOPs
+Params: 12.6 M
 ```
 
 # License
