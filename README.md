@@ -11,3 +11,18 @@ In this paper, we propose an efficient ViT called DGFormer (Dual-Granularity For
 
 Through extensive evaluation across various vision tasks, such as image classification, object detection, and semantic segmentation, we demonstrate that DGFormer outperforms popular models like PVTv2 and Swin Transformer, even with a reduced parameter count. This not only showcases the robust performance of DGFormer but also highlights its potential applicability in real-world scenarios.
 
+<p align="center">
+    <img src="https://github.com/ISCLab-Bistu/LCVT/blob/main/image/Backbone.png" />
+</p>
+
+
+
+<p align = "center">
+
+Dual-Granularity Transformer (DGFormer). 
+
+</p>
+
+
+
+The structure of the DGFormer network is shown in above picture. 
