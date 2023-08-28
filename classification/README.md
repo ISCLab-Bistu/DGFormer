@@ -46,7 +46,7 @@ The directory structure is the standard layout for the torchvision [`datasets.Im
 
 | Method           | Size | Acc@1 | #Params (M) | Config                                   | Download                                                                                   |
 |------------------|:----:|:-----:|:-----------:|------------------------------------------|--------------------------------------------------------------------------------------------|
-| PVT-V2-B0        |  224 |  72.8 |     3.4     | [config](configs/dgformer/dgformer_dga_effn.py)    | 12.9M  [[GitHub]](https://github.com/ISCLab-Bistu/DGFormer/tree/main/classification/checkpoints/DGFormer_DGA_EFFN/dgformer.pth) |
+| DGFormer        |  224 |  72.8 |     3.4     | [config](configs/dgformer/dgformer_dga_effn.py)    | 12.9M  [[GitHub]](https://github.com/ISCLab-Bistu/DGFormer/tree/main/classification/checkpoints/DGFormer_DGA_EFFN/dgformer.pth) |
 
 
 
